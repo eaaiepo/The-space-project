@@ -1,0 +1,88 @@
+/* The off-canvas menu idea comes from W3 Schools
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav
+*/
+
+/* Needed to add an extra class to make sure the menu was above all the images */
+
+.off-canvas-menu {
+
+    margin: 20px 20px 20px 20px;
+    z-index: 3000;
+    position: fixed;
+}
+
+body {
+
+    transition: background-color .5s;
+}
+
+/* It has a fixed position so it pushes the canvas off */
+
+.sidenav {
+    
+    z-index: 1;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2a9d8f;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 100px;
+
+}
+
+.sidenav a {
+    
+    padding: 25px 8px 8px 32px;
+    font-family: Karla, sans-serif;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1c064;
+    display: block;
+    transition: 0.3s;
+    
+
+}
+
+.sidenav a:hover {
+    
+    color: #f1f1f1;
+}
+
+.icon-navigation {
+
+    font-size: 40px;
+    cursor: pointer;
+    color: #ffffff;
+    background: #2a9d8f;
+    padding: 15px;
+    border-radius: 50px 50px 50px 0px;
+}
+
+.sidenav .closebtn {
+    
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #ffffff;
+}
+
+#main {
+    
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
